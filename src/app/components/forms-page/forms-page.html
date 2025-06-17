@@ -1,0 +1,13 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="firstName" />
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="lastName" />
+  <label for="last-name">Age: </label>
+  <input id="last-name" type="text" formControlName="age" />
+  <button type="submit">Submit</button>
+    </form>
+
+    {{form.getRawValue() | json}}
+</div>

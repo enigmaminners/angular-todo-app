@@ -1,0 +1,16 @@
+<div class="container">
+<h1> <i class="fa-regular fa-clipboard"></i> Angular To-Do List </h1>
+<div class="input-group">
+<input type="text" [(ngModel)]="task" placeholder="Enter New Task" />
+<button (click)="addTask()"><i class="fa-regular fa-plus"></i></button>
+</div>
+
+<ul>
+  <li *ngFor="let t of taskList; let i=index">
+    {{t}}
+    <button class="delete-btn" (click)="deleteTask(i)">
+      <i class="fa-regular fa-trash-alt"></i>
+    </button>
+  </li>
+</ul>
+</div>
